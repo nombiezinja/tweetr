@@ -27,6 +27,9 @@ body {
 
 main {
   width: 450px;
-  margin: 140px auto;
+  margin: auto;
+  padding-top: 140px;
+  border-top-width:400px;
+  border-top-width:white;
   background-color: white;
 }

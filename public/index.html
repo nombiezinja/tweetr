@@ -16,11 +16,20 @@
     <!-- Nav css -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- New-tweet css -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweets css -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Character counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -33,19 +42,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-    <br><br><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed augue sed odio aliquet aliquet et vitae mauris. Quisque varius, turpis non elementum mollis, risus neque pellentesque diam, vulputate efficitur arcu massa ut mi. Donec nulla libero, auctor in pellentesque quis, volutpat ac tellus. Donec eu consequat lectus, nec rutrum felis. Mauris metus nulla, facilisis eget purus dictum, accumsan placerat ligula. Vestibulum elit nunc, pellentesque pellentesque efficitur vel, consequat in ligula. Donec molestie augue vel lorem dapibus malesuada. Aenean imperdiet erat nec metus vestibulum, vel blandit nulla pretium.</p>
-
-    <p>Phasellus hendrerit fermentum dapibus. Mauris non dolor a ante egestas auctor. Suspendisse consectetur a dui ultricies viverra. Nullam interdum a est vitae consectetur. Aliquam hendrerit, ligula lobortis ultricies porta, massa dolor sollicitudin ex, eget congue purus ex in ipsum. Vivamus eget scelerisque orci. Morbi dolor nulla, elementum in eros vitae, tristique pretium mauris. Quisque ut tortor iaculis, facilisis lectus at, sollicitudin metus.</p>
-
-    <p>In luctus risus ut rutrum commodo. Phasellus nibh neque, hendrerit a tincidunt in, bibendum eu purus. In nisi est, tristique at elit non, feugiat maximus metus. Nulla vel egestas nunc. Nunc auctor facilisis sem, in molestie turpis consequat vel. Quisque eget orci at libero pretium ultrices. Pellentesque iaculis maximus convallis. Sed pharetra fermentum lacus, nec dictum massa cursus ut. Nam laoreet egestas felis nec eleifend. Etiam molestie nibh metus, id suscipit odio faucibus id. Ut vitae lacus ultricies, aliquet justo non, vestibulum massa. Donec rutrum, nibh non vulputate eleifend, mi ex lacinia purus, sit amet dignissim mauris risus vitae purus.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed augue sed odio aliquet aliquet et vitae mauris. Quisque varius, turpis non elementum mollis, risus neque pellentesque diam, vulputate efficitur arcu massa ut mi. Donec nulla libero, auctor in pellentesque quis, volutpat ac tellus. Donec eu consequat lectus, nec rutrum felis. Mauris metus nulla, facilisis eget purus dictum, accumsan placerat ligula. Vestibulum elit nunc, pellentesque pellentesque efficitur vel, consequat in ligula. Donec molestie augue vel lorem dapibus malesuada. Aenean imperdiet erat nec metus vestibulum, vel blandit nulla pretium.</p>
-
-    <p>Phasellus hendrerit fermentum dapibus. Mauris non dolor a ante egestas auctor. Suspendisse consectetur a dui ultricies viverra. Nullam interdum a est vitae consectetur. Aliquam hendrerit, ligula lobortis ultricies porta, massa dolor sollicitudin ex, eget congue purus ex in ipsum. Vivamus eget scelerisque orci. Morbi dolor nulla, elementum in eros vitae, tristique pretium mauris. Quisque ut tortor iaculis, facilisis lectus at, sollicitudin metus.</p>
-
-    <p>In luctus risus ut rutrum commodo. Phasellus nibh neque, hendrerit a tincidunt in, bibendum eu purus. In nisi est, tristique at elit non, feugiat maximus metus. Nulla vel egestas nunc. Nunc auctor facilisis sem, in molestie turpis consequat vel. Quisque eget orci at libero pretium ultrices. Pellentesque iaculis maximus convallis. Sed pharetra fermentum lacus, nec dictum massa cursus ut. Nam laoreet egestas felis nec eleifend. Etiam molestie nibh metus, id suscipit odio faucibus id. Ut vitae lacus ultricies, aliquet justo non, vestibulum massa. Donec rutrum, nibh non vulputate eleifend, mi ex lacinia purus, sit amet dignissim mauris risus vitae purus.</p>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action= "/tweets">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+    <section id="tweets">
+      <article>
+      </article>
+    </section>
     </main>
-
   </body>
 </html>
