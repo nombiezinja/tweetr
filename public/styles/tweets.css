@@ -1,5 +1,77 @@
-.article {
+#tweets {
+  margin: 0 auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+}
+
+#tweets article {
+  opacity: 0.6;
+  margin-top: 2em;
+  margin-bottom:2em;
+  border-radius: 5px;
   border: solid;
   border-width: 1px;
-  border-color: #A9A9A9;
+  border-color: lightgrey;
+  background-color: white;
 }
+
+#tweets article:hover {
+  opacity: 1.0;
+}
+
+
+#tweets header {
+  background-color: #eee;
+  height: 5em;
+}
+
+
+#tweets .author {
+  margin-top: 10px;
+  margin-left:5px;
+  float: left;
+  color: #244751;
+}
+
+#tweets .avatar {
+  height: 65px;
+  width: auto;
+  float: left;
+  margin: 6px;
+  border: solid;
+  border-color: transparent;
+  border-radius: 20%;
+}
+
+
+
+
+#tweets .handle {
+  display: inline;
+  float: right;
+  color: grey;
+  font-weight: lighter;
+  margin-top: 16px;
+  margin-right: 4px;
+}
+
+#tweets .content {
+  height: 50%;
+  border: solid;
+  border-width: 1px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #F2F2F2;
+  border-top-color: transparent;
+  padding: 1em;
+}
+
+#tweets footer .time {
+  font-weight: lighter;
+  font-size: 70%;
+  padding-left: 10px;
+}
+
+
+

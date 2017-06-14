@@ -8,6 +8,7 @@
   padding-right: 2em;
   background-color: #00a087;
   color: #e8fdff;
+  z-index: 1;
 }
 
 #nav-bar .logo{
@@ -24,8 +25,3 @@
   margin-top: 20px;
 }
 
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
