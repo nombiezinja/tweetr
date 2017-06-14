@@ -2,16 +2,20 @@ $(document).ready(function(){
 
   $('.tweet-form').on('submit', function (event) {
     event.preventDefault();
-    console.log($('.container .counter').val())
-    if($('.container .counter').val() < 0) {
-      alert ('Whoa there friendo, your tweet over 140 characters:0');
-    } else if ($('.container .counter').val() = 0){
-      alert('Hey bud, your tweet can\'t be empty D:');
+    // if(Number($('.container .counter').text()) < 0) {
+    //   alert ('Whoa there friendo, your tweet over 140 characters:0');
+    // } else if (Number($('.container .counter').text())= 140){
+    //   alert('Hey bud, your tweet can\'t be empty D:');
+    var $inputLength = $('.tweet-form textarea').val().length;
+    if($inputLength === 0) {
+      alert('Hey bud, your tweet can\'t be empty (Ծ‸ Ծ)');
+    }else if($inputLength > 140) {
+      alert ('Whoa there friendo, your tweet over 140 characters ◔_◔');
     } else {
        $.ajax({
          method: 'POST',
          url: '/tweets',
-         data: $(this).serialize()
+         data: $(this).serialize();
        }).done(function () {
          console.log("it worked!");
        });
