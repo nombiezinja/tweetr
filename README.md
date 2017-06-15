@@ -5,11 +5,11 @@ Tweeter is a simple, single-page Twitter clone. The server program is built with
 
 ## Product
 
-["Compose tweet box"](https://github.com/nombiezinja/tweetr/docs/compose-tweet.png)
+!["Compose tweet box"](https://github.com/nombiezinja/tweetr/docs/compose-tweet.png)
 
-["Appearnce of tweets change on mouser hover"](https://github.com/nombiezinja/tweetr/docs/hover.png)
+!["Appearnce of tweets change on mouser hover"](https://github.com/nombiezinja/tweetr/docs/hover.png)
 
-["Alert pop-up for invalid tweet"](https://github.com/nombiezinja/tweetr/docs/alert.png)
+!["Alert pop-up for invalid tweet"](https://github.com/nombiezinja/tweetr/docs/alert.png)
 
 
 ## Getting Started
