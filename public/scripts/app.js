@@ -57,7 +57,12 @@ $(document).ready(function(){
     var day = moment(tweet.created_at);
     var $pFooter = $("<p>", {class: "time", text: day});
     var $footer = $("<footer>");
-    $footer.append($pFooter);
+    var $flag = $("<p>", {class: "rxn", text: "🏴"});
+    var $retweet = $("<p>", {class: "rxn", text: "🔁"});
+    var $like = $("<p>", {class: "rxn", text: "♥"});
+    var $div = $("<div>", {class: "rxnDiv"});
+    $div. append($flag). append($retweet). append($like);
+    $footer.append($pFooter).append($div);
 
     var $article = $("<article>");
     $article.append($header).append($section).append($footer);
