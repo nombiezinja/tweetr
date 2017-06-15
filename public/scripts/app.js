@@ -7,6 +7,11 @@ $(document).ready(function(){
     });
   });
 
+//toggles reaction buttons when mouse enters/leaves tweet section
+  $('#tweets'). hover(function(event){
+    $('#tweets .rxnDiv').toggle();
+  });
+
 
 // Submits form with Ajax, updates database, removes current tweets
 // then appends all tweets
@@ -20,14 +25,14 @@ $(document).ready(function(){
       alert('Whoa there friendo, your tweet over 140 characters ◔_◔');
       return;
     } else {
-       $.ajax({
-         method: 'POST',
-         url: '/tweets',
-         data: $(this).serialize()
-       }).done(function(){
-         $('.tweet-form textarea').val('');
-         loadTweets();
-        });
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: $(this).serialize()
+      }).done(function(){
+        $('.tweet-form textarea').val('');
+        loadTweets();
+      });
     }
   });
 
@@ -36,7 +41,7 @@ $(document).ready(function(){
     $.ajax({
       url: '/tweets'
     }).done(function(tweets){
-       renderTweet(tweets);
+      renderTweet(tweets);
     });
   }
 
@@ -56,13 +61,13 @@ $(document).ready(function(){
 
     var day = moment(tweet.created_at);
     var $pFooter = $("<p>", {class: "time", text: day});
-    var $footer = $("<footer>");
     var $flag = $("<p>", {class: "rxn", text: "🏴"});
     var $retweet = $("<p>", {class: "rxn", text: "🔁"});
     var $like = $("<p>", {class: "rxn", text: "♥"});
     var $div = $("<div>", {class: "rxnDiv"});
+    var $footer = $("<footer>");
     $div. append($flag). append($retweet). append($like);
-    $footer.append($pFooter).append($div);
+    $footer.append($div).append($pFooter);
 
     var $article = $("<article>");
     $article.append($header).append($section).append($footer);
