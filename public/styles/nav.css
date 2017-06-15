@@ -25,3 +25,20 @@
   margin-top: 20px;
 }
 
+#nav-bar button{
+  float: right;
+  border: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-size: 0.5px;
+  margin-top:15px;
+  height:50px;
+  width:auto;
+  background-color: lightcyan;
+  color:#00a087;
+}
+
+#nav-bar button:hover{
+  background-color: white;
+  color:black;
+}

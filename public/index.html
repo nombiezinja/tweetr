@@ -28,8 +28,11 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
+    <!-- Moments JS  -->
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
     <!-- Character counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -38,11 +41,11 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button class="compose">📝Compose</button>
     </nav>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
-
+    <!-- Compose new tweet section -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form class="tweet-form" method="POST" action= "/tweets">
@@ -51,24 +54,9 @@
         <span class="counter">140</span>
       </form>
     </section>
-
+    <!-- tweets section -->
     <section id="tweets">
     </section>
-
     </main>
-    <script>
-    $('#tweet-form').on('submit', function (event) {
-      event.preventDefault();
-      $.ajax({
-        method: 'POST',
-        url: '/tweets',
-        data: $(this).serialize()
-      }).done(function () {
-        console.log("it worked!");
-      });
-    });
-
-    </script>
   </body>
 </html>
-z

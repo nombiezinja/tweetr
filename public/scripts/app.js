@@ -1,35 +1,46 @@
 $(document).ready(function(){
 
+// toggles compose tweet section when compose button clicked
+  $('.compose').on('click', function(event) {
+    $('.new-tweet').slideToggle('fast', function(){
+      $('.new-tweet textarea').focus();
+    });
+  });
+
+
+// Submits form with Ajax, updates database, removes current tweets
+// then appends all tweets
   $('.tweet-form').on('submit', function (event) {
     event.preventDefault();
-    // if(Number($('.container .counter').text()) < 0) {
-    //   alert ('Whoa there friendo, your tweet over 140 characters:0');
-    // } else if (Number($('.container .counter').text())= 140){
-    //   alert('Hey bud, your tweet can\'t be empty D:');
     var $inputLength = $('.tweet-form textarea').val().length;
     if($inputLength === 0) {
       alert('Hey bud, your tweet can\'t be empty (Ծ‸ Ծ)');
+      return;
     }else if($inputLength > 140) {
-      alert ('Whoa there friendo, your tweet over 140 characters ◔_◔');
+      alert('Whoa there friendo, your tweet over 140 characters ◔_◔');
+      return;
     } else {
        $.ajax({
          method: 'POST',
          url: '/tweets',
-         data: $(this).serialize();
-       }).done(function () {
-         console.log("it worked!");
-       });
+         data: $(this).serialize()
+       }).done(function(){
+         $('.tweet-form textarea').val('');
+         loadTweets();
+        });
     }
   });
 
+// Ajax request to retrieve tweets then render with functions below
   function loadTweets(){
     $.ajax({
       url: '/tweets'
     }).done(function(tweets){
-      renderTweet(tweets);
-    })
+       renderTweet(tweets);
+    });
   }
 
+// Retrieves one tweet and render tweet DOM object
   function createTweetElements(tweet) {
 
     var $header = $("<header>");
@@ -43,8 +54,8 @@ $(document).ready(function(){
     $section.append($pContent);
 
 
-
-    var $pFooter = $("<p>", {class: "time", text: tweet.created_at});
+    var day = moment(tweet.created_at);
+    var $pFooter = $("<p>", {class: "time", text: day});
     var $footer = $("<footer>");
     $footer.append($pFooter);
 
@@ -53,11 +64,12 @@ $(document).ready(function(){
 
     return $article;
   }
-
+// Loops through tweets object and calls create tweet function on each
   function renderTweet(tweetData){
+    $('#tweets').empty();
     tweetData.forEach(function(item, index){
       var $newTweet = createTweetElements(tweetData[index]);
-      $("#tweets").append($newTweet);
+      $("#tweets").prepend($newTweet);
     });
   }
 
