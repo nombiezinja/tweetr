@@ -16,33 +16,31 @@
     margin-right: 2em;
     margin-bottom: 3em;
     display: block;
-  }
 
+    textarea {
+      width: 100%;
+      padding-left: 3px;
+      padding-top: 5px;
+      display:block;
+      margin-bottom: 1em;
+    }
 
-  .new-tweet textarea {
-    width: 100%;
-    padding-left: 3px;
-    padding-top: 5px;
-    display:block;
-    margin-bottom: 1em;
-  }
+    > h2{
+      border: solid;
+      border-bottom-color: black;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-width: $borderwidth;
+      color:$font-dark
+    }
 
-  .new-tweet > h2{
-    border: solid;
-    border-bottom-color: black;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-width: $borderwidth;
-    color:$font-dark
-  }
+    .counter {    float: right;
+    }
 
-  .counter {
-    float: right;
-  }
-
-  .changeRed {
-    color: red;
+    .changeRed {
+      color: red;
+    }
   }
 
 }
