@@ -1,0 +1,50 @@
+@import 'variables';
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: $main-green;
+  color: $font-dark;
+  z-index: 1;
+}
+
+#nav-bar {
+
+  .logo{
+    height: 80px;
+    width: 80px;
+    float: left;
+    padding-right:10px;
+  }
+
+  .header{
+    font-size: 2rem;
+    float: left;
+    margin-top: 20px;
+    color: $lightgreen
+  }
+
+  button{
+    float: right;
+    border: solid;
+    border-color: black;
+    border-radius: $roundcorner;
+    border-width: $borderwidth;
+    margin-top:15px;
+    height:50px;
+    width:auto;
+    background-color: $lightgreen;
+    color:$main-green;
+  }
+
+  button:hover{
+    background-color: white;
+    color:black;
+  }
+
+}

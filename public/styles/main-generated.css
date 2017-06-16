@@ -1,0 +1,183 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+ * Global layout stuff
+ */
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+main {
+  width: 450px;
+  margin: auto;
+  padding-bottom: 80px;
+  padding-top: 140px;
+  border-top-width: 400px;
+  border-top-width: white;
+  background-color: white; }
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #00a087;
+  color: #244751;
+  z-index: 1; }
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+  padding-right: 10px; }
+
+#nav-bar .header {
+  font-size: 2rem;
+  float: left;
+  margin-top: 20px;
+  color: #e8fdff; }
+
+#nav-bar button {
+  float: right;
+  border: solid;
+  border-color: black;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-top: 15px;
+  height: 50px;
+  width: auto;
+  background-color: #e8fdff;
+  color: #00a087; }
+
+#nav-bar button:hover {
+  background-color: white;
+  color: black; }
+
+.container .new-tweet {
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: #eee;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+  display: block; }
+
+.container .new-tweet textarea {
+  width: 100%;
+  padding-left: 3px;
+  padding-top: 5px;
+  display: block;
+  margin-bottom: 1em; }
+
+.container .new-tweet > h2 {
+  border: solid;
+  border-bottom-color: black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-width: 1px;
+  color: #244751; }
+
+.container .counter {
+  float: right; }
+
+.container .changeRed {
+  color: red; }
+
+#tweets {
+  margin: 0 auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em; }
+
+#tweets article {
+  opacity: 0.6;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: white; }
+
+#tweets article:hover {
+  opacity: 1.0; }
+
+#tweets header {
+  background-color: #eee;
+  height: 5em; }
+
+#tweets .author {
+  margin-top: 10px;
+  margin-left: 5px;
+  float: left;
+  color: #244751; }
+
+#tweets .avatar {
+  height: 65px;
+  width: auto;
+  float: left;
+  margin: 6px;
+  border: solid;
+  border-color: transparent;
+  border-radius: 5px; }
+
+#tweets .handle {
+  display: inline;
+  float: right;
+  color: grey;
+  font-weight: lighter;
+  margin-top: 16px;
+  margin-right: 4px; }
+
+#tweets .content {
+  height: 50%;
+  border: solid;
+  border-width: 1px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #F2F2F2;
+  border-top-color: transparent;
+  padding: 1em; }
+
+#tweets footer .time {
+  height: 20px;
+  font-weight: lighter;
+  font-size: 70%;
+  padding-left: 10px;
+  display: inline; }
+
+#tweets .rxn {
+  float: right;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0; }
+
+#tweets .rxnDiv {
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: none;
+  color: #00a087; }

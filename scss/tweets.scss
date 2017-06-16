@@ -1,0 +1,102 @@
+@import 'variables';
+
+#tweets {
+  margin: 0 auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+}
+
+#tweets {
+
+  article {
+    opacity: 0.6;
+    margin-top: 2em;
+    margin-bottom:2em;
+    border-radius: $roundcorner;
+    border: solid;
+    border-width: $borderwidth;
+    border-color: lightgrey;
+    background-color: white;
+  }
+
+  article:hover {
+    opacity: 1.0;
+  }
+
+  header {
+    background-color: #eee;
+    height: 5em;
+  }
+
+
+  .author {
+    margin-top: 10px;
+    margin-left:5px;
+    float: left;
+    color: $font-dark;
+  }
+
+  .avatar {
+    height: 65px;
+    width: auto;
+    float: left;
+    margin: 6px;
+    border: solid;
+    border-color: transparent;
+    border-radius: $roundcorner;
+  }
+
+
+  .handle {
+    display: inline;
+    float: right;
+    color: grey;
+    font-weight: lighter;
+    margin-top: 16px;
+    margin-right: 4px;
+  }
+
+  .content {
+    height: 50%;
+    border: solid;
+    border-width: $borderwidth;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #F2F2F2;
+    border-top-color: transparent;
+    padding: 1em;
+  }
+
+  footer .time {
+    height: 20px;
+    font-weight: lighter;
+    font-size: 70%;
+    padding-left: 10px;
+    display: inline;
+  }
+
+  .rxn {
+    float: right;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .rxnDiv{
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: none;
+    color: $main-green;
+  }
+
+}
+
+
+
+
+
+
