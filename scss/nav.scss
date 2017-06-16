@@ -11,30 +11,35 @@
   background-color: $main-green;
   color: $font-dark;
   z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 
   .logo{
     height: 80px;
     width: 80px;
-    float: left;
     padding-right:10px;
   }
 
   .header{
     font-size: 2rem;
-    float: left;
     margin-top: 20px;
     color: $lightgreen
   }
 
+  div{
+    width: 75%
+  }
+
   button{
-    float: right;
     border: solid;
     border-color: black;
     border-radius: $roundcorner;
     border-width: $borderwidth;
     margin-top:15px;
+    margin-right:1em;
     height:50px;
-    width:auto;
+    width:7em;
     background-color: $lightgreen;
     color:$main-green;
   }
@@ -43,5 +48,6 @@
     background-color: white;
     color:black;
   }
+
 
 }

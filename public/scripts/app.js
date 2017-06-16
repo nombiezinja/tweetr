@@ -22,7 +22,7 @@ $(document).ready(function(){
       alert('Hey bud, your tweet can\'t be empty (Ծ‸ Ծ)');
       return;
     }else if($inputLength > 140) {
-      alert('Whoa there friendo, your tweet over 140 characters ◔_◔');
+      alert('Whoa there friendo, your tweet is over 140 characters ◔_◔');
       return;
     } else {
       $.ajax({
@@ -63,7 +63,7 @@ $(document).ready(function(){
     var $pFooter = $("<p>", {class: "time", text: day});
     var $flag = $("<button>", {class: "rxn flag", text: "🏴"});
     var $retweet = $("<button>", {class: "rxn retweet", text: "🔁"});
-    var $like = $("<button>", {class: "rxn like", text: "♥", value: "1"});
+    var $like = $("<button>", {class: "rxn like", text: "♥", type: "submit", value: 1});
     var $div = $("<div>", {class: "rxnDiv"});
     var $footer = $("<footer>");
     $div. append($flag). append($retweet). append($like);

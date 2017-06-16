@@ -28,6 +28,12 @@
     <!-- Character counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+    <!-- Log in JS -->
+    <script type="text/javascript" src="/scripts/log-in.js"></script>
+
+    <!-- Register JS -->
+    <script type="text/javascript" src="/scripts/register.js"></script>
+
   </head>
 
   <body>
@@ -36,10 +42,30 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <div></div>
+      <!-- buttons -->
+      <button class="loginbtn">Log In</button>
+      <button class="registerbtn">Register</button>
       <button class="compose">📝Compose</button>
     </nav>
 
+
     <main class="container">
+    <!-- register -->
+    <div class="registerdiv">
+      <h2>Register</h2>
+      <form method="POST" action= "/register" class="register-form">
+         <span>
+         <label for="email" class="label">Enter your email:</label>
+         <input class="input email-input" type="email" name="email">
+         </span>
+         <span>
+         <label for="password" class="label">Enter your password:</label>
+         <input class="input password-input" type="password" name="password">
+         </span>
+        <button type="submit" class="formbtn">Submit</button>
+      </form>
+    </div>
     <!-- Compose new tweet section -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
