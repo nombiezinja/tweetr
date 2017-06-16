@@ -59,11 +59,11 @@ $(document).ready(function(){
     $section.append($pContent);
 
 
-    var day = moment(tweet.created_at);
+    var day = moment(tweet.created_at).fromNow();
     var $pFooter = $("<p>", {class: "time", text: day});
-    var $flag = $("<p>", {class: "rxn", text: "🏴"});
-    var $retweet = $("<p>", {class: "rxn", text: "🔁"});
-    var $like = $("<p>", {class: "rxn", text: "♥"});
+    var $flag = $("<button>", {class: "rxn flag", text: "🏴"});
+    var $retweet = $("<button>", {class: "rxn retweet", text: "🔁"});
+    var $like = $("<button>", {class: "rxn like", text: "♥", value: "1"});
     var $div = $("<div>", {class: "rxnDiv"});
     var $footer = $("<footer>");
     $div. append($flag). append($retweet). append($like);

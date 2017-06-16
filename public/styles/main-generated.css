@@ -144,22 +144,35 @@ main {
     border-bottom-color: #F2F2F2;
     border-top-color: transparent;
     padding: 1em; }
-  #tweets footer .time {
-    height: 20px;
-    font-weight: lighter;
-    font-size: 70%;
-    padding-left: 10px;
-    display: inline; }
-  #tweets .rxn {
-    float: right;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0; }
-  #tweets .rxnDiv {
-    float: right;
-    margin: 0;
-    padding: 0;
-    display: none;
-    color: #00a087; }
+  #tweets footer {
+    height: 2em;
+    padding-top: 0.2em; }
+    #tweets footer .time {
+      height: 1em;
+      font-weight: lighter;
+      font-size: 0.7em;
+      padding-left: 1em;
+      display: inline; }
+    #tweets footer .rxn {
+      float: right;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      border: solid;
+      border-color: transparent;
+      color: #00a087;
+      background-color: white;
+      height: 1.7em; }
+    #tweets footer :hover {
+      color: paleturquoise; }
+    #tweets footer .rxnDiv {
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0.2em;
+      margin-left: 0;
+      display: none;
+      height: 3em;
+      color: #00a087; }
