@@ -30,11 +30,13 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   const DataHelpers = require("./lib/data-helpers.js")(db);
   const userHelpers = require("./lib/util/user-helper.js");
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  const loginRoutes = require("./routes/login")(db);
   const registrationRoutes = require("./routes/registration")(db, userHelpers);
 
   // Mount routes to path:
   app.use("/tweets", tweetsRoutes);
   app.use("/register", registrationRoutes);
+  app.use("/login", loginRoutes);
 });
 
 app.listen(PORT, () => {

@@ -6,8 +6,8 @@ $(document).ready(function(){
 
   $('.register-form').on('submit', function (event) {
     event.preventDefault();
-    var $email = $('.email-input');
-    var $password = $('.password-input');
+    var $email = $('.register-form .email-input');
+    var $password = $('.register-form .password-input');
     if($email.val().length === 0 || $password.val().length === 0) {
       alert('Please enter an email and a password (Ծ‸ Ծ)');
       return;
@@ -19,6 +19,8 @@ $(document).ready(function(){
         data: $(this).serialize()
       }).done(function(){
         $('.register-form .input').val('');
+        $('.logindiv').hide();
+        $('.loginbtn').hide();
         $('.registerbtn').hide();
       });
 

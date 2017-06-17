@@ -214,3 +214,38 @@ main {
   .registerdiv button {
     margin-top: 15px;
     margin-right: 1em; }
+
+.logindiv {
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: #eee;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+  display: none; }
+  .logindiv h2 {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    border: solid;
+    border-bottom-color: black;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-width: 1px;
+    color: #244751; }
+  .logindiv form {
+    margin: 0.3em; }
+  .logindiv .input {
+    display: block;
+    width: 100%; }
+  .logindiv .label {
+    display: block; }
+  .logindiv button {
+    margin-top: 15px;
+    margin-right: 1em; }
